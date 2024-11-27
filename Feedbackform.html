@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f1f8ff, #c8e4fd);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .feedback-container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .feedback-container h2 {
+            font-size: 28px;
+            color: #26773a;
+            margin-bottom: 20px;
+        }
+        .feedback-container p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .feedback-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .feedback-form input, .feedback-form textarea, .feedback-form select, .feedback-form button {
+            margin-bottom: 15px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+        .feedback-form input:focus, .feedback-form textarea:focus, .feedback-form select:focus {
+            border-color: #26773a;
+        }
+        .feedback-form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .rating-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        .rating-container label {
+            font-size: 18px;
+            cursor: pointer;
+            color: #26773a;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .rating-container input[type="radio"] {
+            display: none;
+        }
+        .rating-container label:hover, .rating-container input:checked + label {
+            background-color: #26773a;
+            color: #fff;
+        }
+        .checkbox-container {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        .submit-btn, .clear-btn {
+            background-color: #26773a;
+            color: #fff;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover, .clear-btn:hover {
+            background-color: #1f5f2d;
+        }
+        .clear-btn {
+            background-color: #f44336;
+            margin-top: 10px;
+        }
+        .confirmation-msg {
+            color: #26773a;
+            font-size: 18px;
+            font-weight: bold;
+            display: none;
+        }
+        .tooltip {
+            position: relative;
+        }
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+<div class="feedback-container">
+    <h2>Feedback Form</h2>
+    <p>We value your feedback! Please let us know how we can improve our service.</p>
+    
+    <form class="feedback-form" id="feedback-form">
+        <input type="text" name="name" placeholder="Your Name" required class="tooltip" data-tooltip="Please enter your full name.">
+        <input type="email" name="email" placeholder="Your Email" required class="tooltip" data-tooltip="Enter a valid email address.">
+        
+        <textarea name="feedback" placeholder="Your Feedback" required class="tooltip" data-tooltip="Share your experience or suggestions."></textarea>
+        
+        <div class="rating-container">
+            <label for="poor">
+                <input type="radio" id="poor" name="rating" value="Poor" required>
+                Poor
+            </label>
+            <label for="good">
+                <input type="radio" id="good" name="rating" value="Good">
+                Good
+            </label>
+            <label for="bad">
+                <input type="radio" id="bad" name="rating" value="Bad">
+                Bad
+            </label>
+        </div>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" name="newsletter" id="newsletter">
+            <label for="newsletter">Subscribe to our Newsletter</label>
+        </div>
+        
+        <input type="file" name="attachment" accept="image/*, .pdf, .docx, .txt" class="tooltip" data-tooltip="Attach any relevant files if necessary.">
+        
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+        <button type="button" class="clear-btn" onclick="clearForm()">Clear Form</button>
+    </form>
+
+    <div class="confirmation-msg" id="confirmation-msg">
+        Thank you for your feedback! We appreciate your input.
+    </div>
+</div>
+
+<script>
+    // Handle form submission
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Display confirmation message
+        document.getElementById('confirmation-msg').style.display = 'block';
+        
+        // Reset form after submission
+        setTimeout(function() {
+            document.getElementById('feedback-form').reset();
+            document.getElementById('confirmation-msg').style.display = 'none';
+        }, 3000);
+    });
+
+    // Clear form function
+    function clearForm() {
+        document.getElementById('feedback-form').reset();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #a0e1e0, #73d2d8); /* Gradient background */
+        }
+        .login-container {
+            width: 400px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #2f4f4f;
+            font-size: 24px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        .checkbox-container input {
+            margin-right: 8px;
+        }
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #289b45; /* Green button */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .login-button:hover {
+            background-color: #1d5f2d;
+        }
+        .links {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .links a {
+            color: #26773a;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form>
+        <input type="email" class="input-field" placeholder="Email" required>
+        <input type="password" class="input-field" placeholder="Password" required>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" id="show-password">
+            <label for="show-password">Show Password</label>
+        </div>
+        
+        <button type="submit" class="login-button" ><a href="Home.html" style="text-decoration: none;color: black;">Login IN</a></button>
+        
+        <div class="links">
+            <p><a href="#">Forgot Username / Password?</a></p>
+            <p>Don't have an account? <a href="sign.html">Sign up</a></p>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

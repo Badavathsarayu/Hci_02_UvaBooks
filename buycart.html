@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Add New Address</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #e47911;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .autofill-btn {
+            background-color: #f3f3f3;
+            color: #007185;
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .autofill-btn:hover {
+            background-color: #e7e7e7;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .checkbox-label input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #ffa41c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .button:hover {
+            background-color: #f29000;
+        }
+        .booknow-button {
+            background-color: #ff4500;
+        }
+        .booknow-button:hover {
+            background-color: #e03e00;
+        }
+        .payment-section {
+            margin-top: 30px;
+        }
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .payment-method input[type="radio"] {
+            margin-right: 10px;
+        }
+        .payment-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .payment-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Uva Books </h1>
+
+        <h2>Add New Address</h2>
+        <button class="autofill-btn">Save time. Autofill your current location.</button>
+        
+        <form action="/submit-address" method="post">
+            <label for="country">Country/Region</label>
+            <select id="country" name="country" required>
+                <option value="India">India</option>
+                <!-- Add more countries if needed -->
+            </select>
+
+            <label for="name">Full name (First and Last name)</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Mobile number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="">
+
+            <label for="pincode">Pincode</label>
+            <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required placeholder="6 digits [0-9] PIN code">
+
+            <label for="address1">Flat, House no., Building, Company, Apartment</label>
+            <input type="text" id="address1" name="address1" required>
+
+            <label for="address2">Area, Street, Sector, Village</label>
+            <input type="text" id="address2" name="address2" required>
+
+            <label for="landmark">Landmark</label>
+            <input type="text" id="landmark" name="landmark" placeholder="E.g. near Apollo hospital">
+
+            <label for="city">Town/City</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State</label>
+            <select id="state" name="state" required>
+                <option value="">Choose a state</option>
+                <option value="MH">Maharashtra</option>
+                <option value="DL">Delhi</option>
+                <option value="T">Telanagana</option>
+                <option value="Ap">andhar pradesh</option>
+                <option value="TN">Tamil nadu</option>
+                <option value="K">Kerala</option>
+                <option value="As">Assam</option>
+                <option value="MP">madhya pradesh</option>
+                <option value="UP">Utter pradesh</option>
+                <option value="B">Bihar</option>
+                <option value="CH">Chhattisgarh</option>
+                <option value="G">Gujarat</option>
+                <option value="G">Goa</option>
+                <option value="B">Arunach pradesh</option>
+                <option value="RJ">Rajasthan</option>
+                <option value="HP">Himachal Pradesh</option>
+                <option value="P">Punjab</option>
+                <option value="K">Karanatak</option>
+                <option value="O">Odisha</option>
+
+
+            </select>
+
+            <div class="checkbox-label">
+                <input type="checkbox" name="default" id="default">
+                <label for="default">Make this my default address</label>
+            </div>
+
+            <label for="instructions">Delivery instructions (optional)</label>
+            <textarea id="instructions" name="instructions" placeholder="Add preferences, notes, access codes, etc." rows="3"></textarea>
+
+            <div class="button-container">
+                <button type="submit" class="button">Use this address</button>
+                <button type="button" class="button booknow-button">Book Now</button>
+            </div>
+        </form>
+
+        <!-- Online Payment Section -->
+        <div class="payment-section">
+            <h2>Online Payment</h2>
+            <div class="payment-method">
+                <input type="radio" id="credit-card" name="payment" value="credit-card">
+                <label for="credit-card">Credit Card</label>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="debit-card" name="payment" value="debit-card">
+                <label for="debit-card">Debit Card</label>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="net-banking" name="payment" value="net-banking">
+                <label for="net-banking">Net Banking</label>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="upi" name="payment" value="upi">
+                <label for="upi">UPI</label>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="cod" name="payment" value="cod">
+                <label for="cod">Cash on Delivery</label>
+            </div>
+
+            <!-- Payment Button -->
+            <button type="button" class="payment-button"><a href="payment.html" style="text-decoration: none;color: black;">Proceed to Payment</a>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store - Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2b6cb0 ;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            margin-left: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .category h2 {
+            background-color:#5a67d8;
+            color: white;
+            padding: 10px;
+        }
+
+        .books {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .book {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .book img {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .price {
+            font-weight: bold;
+            color: green;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .discount {
+            color: red;
+        }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.footer-top {
+    background-color: #b440a1;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-top .feature {
+    display: flex;
+    align-items: center;
+}
+
+.footer-top .feature img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer-main div {
+    width: 23%;
+}
+
+footer {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.footer-top {
+    background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer-main div {
+    width: 20%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.footer-links div {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+    background-color: pink;
+    
+}
+
+.footer-links h3 {
+    color: #333;
+    font-size: 1px;
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    color: black; 
+}
+
+.footer-links ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.support p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.support a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.support a:hover {
+    text-decoration: underline;
+}
+
+
+.our-products {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.our-products h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.our-products p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.our-products p a:hover {
+    text-decoration: underline;
+}
+.final {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.final > div {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-links, .footer-quick-links, {
+    text-align: left;
+}
+
+.footer-links h3, .footer-quick-links h3, {
+    font-size: 1px;
+    margin-bottom: 5px;
+} 
+.footer-top {
+            background-color: hwb(198 23% 28%);
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .app-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; 
+        }
+
+        .app-links .app-icon {
+            size: 1px 1px;
+           
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Book Store</h1>
+</header>
+<div class="top-bar">
+    <!-- Search bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="SearchbyISBN, Title, Author" id="search">
+        <button type="button">Search</button>
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+   <div class="Sign">
+     <a href="login.html">login</a>
+     <i class="fa-regular fa-user"></i>
+   </div>
+
+</div>
+
+<nav>
+    <a href="Newarrival.html">New Arrival</a>
+    <a href="BestSeller.html">Best Seller</a>
+    <a href="spritual.html">Spiritual</a>
+    <a href="sports.html">Sports</a>
+    <a href="comic.html">comic</a>
+</nav>
+
+<div class="container">
+    <div class="category" id="New Arrival">
+        <h2>New Arrival</h2>
+        <div class="books">
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagQHtz19ZYFzgpbdn?embed=1&width=1536&height=2048" alt="New Arrival">
+                <a href="christmas.html"><p>the chirstmas carol</p></a>
+                <p class="price">₹199 <span class="old-price">₹299</span> <span class="discount">33% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagTUKWNl-hgT_P92A?embed=1&width=216&height=233" alt="New Arrival">
+                <a href="banjan.html"> <p> Banjamin Franklin</p></a>
+                <p class="price">₹249 <span class="old-price">₹399</span> <span class="discount">37% OFF</span></p>
+                </div>
+        <div class="book">
+            <img src="https://1drv.ms/i/s!AjCJeNv7jYJagQOY9EXaciH1G86J?embed=1&width=500&height=500" alt="New Arrival">
+            <a href="powerRudhrask.html"><p>The power of Rudhraksha</p></a>
+            <p class="price">₹449 <span class="old-price">₹329</span> <span class="discount">37% OFF</span></p>
+        </div>
+        <div class="book">
+            <img src="https://1drv.ms/i/s!AjCJeNv7jYJagTfgeMQ_QCa2dstq?embed=1&width=225&height=225" alt="New Arrival">
+            <a href="ikhil.html"><p> IkIhi</p></a>
+            <p class="price">₹449 <span class="old-price">₹349</span> <span class="discount">37% OFF</span></p>
+        </div>
+    </div>
+
+    <div class="category" id="Best Seller">
+        <h2>Best Seller</h2>
+        <div class="books">
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJafgcsEO03r_nsz14?embed=1&width=701&height=1080" alt="Best Seller">
+                <p>all the light we cannot see</p>
+                <p class="price">₹399 <span class="old-price">₹329</span> <span class="discount">33% OFF</span></p>
+        </div>
+        <div class="book">
+            <img src="https://1drv.ms/i/s!AjCJeNv7jYJagQvi5_5IyzwNX7gF?embed=1&width=181&height=278" alt="Best Seller">
+            <p> Atomic Habits</p>
+            <p class="price">₹449 <span class="old-price">₹469</span> <span class="discount">37% OFF</span></p>
+        </div>
+        <div class="book">
+            <img src="https://1drv.ms/i/s!AjCJeNv7jYJagQYqDx6wZ7eMDBsc?embed=1&width=294&height=171" alt="Best Seller">
+            <p> Asain cooks</p>
+            <p class="price">₹449 <span class="old-price">₹479</span> <span class="discount">37% OFF</span></p>
+        </div>
+        <div class="book">
+            <img src="https://1drv.ms/i/s!AjCJeNv7jYJagTgGW4A6PDyqYESR?embed=1&width=667&height=1000" alt="Best Seller">
+            <p> Red pandas</p>
+            <p class="price">₹449 <span class="old-price">₹399</span> <span class="discount">37% OFF</span></p>
+        </div>
+        <div class="book">
+            <img src="https://1drv.ms/i/s!AjCJeNv7jYJagQgwVPs4P4edWmqI?embed=1&width=300&height=450" alt="Best Seller">
+            <p> The Women</p>
+            <p class="price">₹449 <span class="old-price">₹599</span> <span class="discount">37% OFF</span></p>
+        </div>
+    </div>
+
+    <div class="category" id="spiritual">
+        <h2>Spiritual</h2>
+        <div class="books">
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagQwe7UlKOZhE6tEB?embed=1&width=513&height=738" alt="spiritual">
+                <p>Spiritual yogi</p>
+                <p class="price">₹299 <span class="old-price">₹899</span> <span class="discount">40% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagQpj0IItv8yihSoy?embed=1&width=1706&height=2560" alt="Spiritual">
+                <a href="self.html"><p>Self Knowledge</p></a>
+                <p class="price">₹349 <span class="old-price">₹479</span> <span class="discount">36% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagQ2mp1BGnjAr0POy?embed=1&width=651&height=1000" alt="spiritual">
+                <p>The Art of Happiness</p>
+                <p class="price">₹299 <span class="old-price">₹299</span> <span class="discount">40% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagQ791RfkjXSb4qdE?embed=1&width=768&height=1185" alt="spiritual">
+                <p>Daimod Sword</p>
+                <p class="price">₹299 <span class="old-price">₹399</span> <span class="discount">40% OFF</span></p>
+            </div>
+    </div>
+
+    <!-- Magazines Category -->
+    <div class="category" id="Fiction">
+        <h2>Magazines</h2>
+        <div class="books">
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJaf_zE3EebZLYe7bk?embed=1&width=275&height=400" alt="Ficition">
+                <a href="harrypotter.html"><p>harry potter</p></a>
+                <p class="price">₹149 <span class="old-price">₹499</span> <span class="discount">25% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagTkJnQ25g-G-sMe0?embed=1&width=187&height=270" alt="Ficition">
+                <p>the Sceret of More</p>
+                <p class="price">₹199 <span class="old-price">₹649</span> <span class="discount">20% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagTpkXDuhu5VQ1ePI?embed=1&width=1600&height=2560" alt="Ficition">
+                <p>Magic in the moon Light</p>
+                <p class="price">₹199 <span class="old-price">₹749</span> <span class="discount">20% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagTv14RpDf1QBMoCJ?embed=1&width=648&height=1000" alt="Ficition">
+                <p> pride and prejustice</p>
+                <p class="price">₹199 <span class="old-price">₹449</span> <span class="discount">20% OFF</span></p>
+            </div>
+    </div>
+     <!-- Magazines Category -->
+    <div class="category" id="Sport">
+        <h2>Sports books</h2>
+        <div class="books">
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagTxkJDLSrMWl0vKA?embed=1&width=600&height=600" alt="Sport">
+                <p>PELE why Sccoer Matter</p>
+                <p class="price">₹149 <span class="old-price">₹199</span> <span class="discount">25% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagT39IzElfZi0C7Ph?embed=1&width=180&height=279" alt="Sport">
+                <p> The Dream factory</p>
+                <p class="price">₹199 <span class="old-price">₹249</span> <span class="discount">20% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagRVLzTtAM4-ObS0H?embed=1&width=192&height=190" alt="Sport">
+                <p> The Dhoni Tough</p>
+                <p class="price">₹199 <span class="old-price">₹256</span> <span class="discount">20% OFF</span></p>
+            </div>
+            <div class="book">
+                <img src="https://1drv.ms/i/s!AjCJeNv7jYJagRaoAbURdmG1tOjS?embed=1&width=180&height=267" alt="Sport">
+                <p> The game</p>
+                <p class="price">₹199 <span class="old-price">₹349</span> <span class="discount">20% OFF</span></p>
+            </div> <br>
+            <br><br>
+        </div>
+             <div class="footer-top">
+                <p>Enjoy a wide collection of books at unbeatable pricess!</p>
+            </div>
+             <div class="final">
+             <div class="footer-links">
+                <h3>Our Links</h3>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Bookchor Wholesale</a></li>
+                    <li><a href="#">Sell with Us</a></li>
+            
+            </div>
+            <div class="footer-quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="app-icon">
+                <h3>Support</h3>
+                <p>📞 Call: 999999999</p>
+                <p>📧 Email: cs@bookchor.com</p>
+                <h4>Download Mobile App</h4>
+                <div class="app-links">
+                    <img src="https://1drv.ms/i/s!AjCJeNv7jYJagSmXf8kxtShIMxaA?embed=1&width=50&height=50" alt="Google Play">
+                    <img src="https://1drv.ms/i/s!AjCJeNv7jYJagSoLxlerh6eSVowm?embed=1&width=100&height=300" alt="App Store">
+                </div>
+            </div>
+             </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+            <div class="footer-products">
+                <h4>Our Products:</h4>
+                <a href="#">Bookchor</a> | 
+                <a href="#">Lock The Box</a> | 
+                <a href="#">Dump</a>
+            </div>
+            <p>© 2024 Bookchor, All rights reserved.</p>
+            <div class="payment-methods">
+                <img src="visa.png" alt="Visa">
+                <img src="mastercard.png" alt="Mastercard">
+                <img src="discover.png" alt="Discover">
+                <img src="rupay.png" alt="RuPay">
+                <img src="netbanking.png" alt="Net Banking">
+                <img src="cash.png" alt="Cash on Delivery">
+                <img src="emi.png" alt="Easy EMI Options">
+            </div>
+        </footer>
+
+</body>
+</html>
+    </div>
+
+</div>
+
+</body>
+</html>
